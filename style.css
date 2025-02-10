@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.card {
+  width: 100%;
+  max-width: 525px;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #fff;
+  /* margin: 0 auto; */
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 20px;
+  height: 50px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search button img {
+  width: 12px;
+}
+
+.weather-icon {
+  width: 140px;
+  margin-top: 30px;
+}
+
+.weather h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.weather h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.humidity,
+.wind {
+  font-size: 20px;
+  margin-top: -6px;
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  color: red;
+  display: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Add a simple animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .search input {
+    height: 40px; /* Further reduce height for small screens */
+    font-size: 14px; /* Adjust font size */
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .search button {
+    height: 40px; /* Further reduce height for small screens */
+    width: 40px; /* Further reduce width for small screens */
+  }
+
+  .search button img {
+    width: 10px; /* Adjust icon size */
+  }
+}
+@media (max-width: 470px) {
+  .humidity,
+  .wind {
+    font-size: 15px;
+    margin-top: -3px;
+  }
+
+  .wind-speed,
+  .humidity-out {
+    font-size: 10px;
+  }
+  .search input {
+    height: 30px; /* Further reduce height for small screens */
+    font-size: 10px; /* Adjust font size */
+    padding: 10px 10px; /* Adjust padding */
+  }
+  .card {
+    padding: 20px 15px;
+  }
+
+  .search button {
+    height: 30px;
+    width: 30px; /* Further reduce width for small screens */
+  }
+
+  .search {
+    gap: 5px;
+  }
+
+  .search button img {
+    width: 10px; /* Adjust icon size */
+  }
+}
