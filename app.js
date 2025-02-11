@@ -48,6 +48,7 @@ function displayWeatherData(data) {
     Drizzle: "drizzle.png",
     Mist: "mist.png",
     Snow: "snow.png",
+    Haze: "haze.png",
   };
 
   weatherIcon.src = `images/${weatherConditions[data.sky]}`;
